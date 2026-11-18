@@ -1,0 +1,36 @@
+{
+  "completed_at": "2026-11-18T07:12:15.981825+00:00",
+  "original_artifacts_unchanged": true,
+  "non_target_outputs_unchanged": true,
+  "pipelines": {
+    "original_B": {
+      "parent_directory": "NT_LLM/runs/coverage_B_reference_20261109",
+      "retry_directory": "NT_LLM/runs/retry_B_combined_20261118T062415Z/original_B/retry_run",
+      "targets": 8,
+      "recovered_usable": 0,
+      "remaining_unusable": 8,
+      "total_primary_usable": 120,
+      "new_failed_attempts": 16,
+      "frozen_configuration_preserved": true,
+      "parent_manifest_sha256": "4a110ce0bd66032669b4bc7a93420f01d0b70983d70639ca6f1490f2f68513e1",
+      "retry_manifest_sha256": "ddcb10553f4025197571a11c142eaa57c9beafbdd6f652826923a1a0a8d48b5e",
+      "retry_predictions_sha256": "21397aec4f86d8f375b8a65733c042c2a9e75fa916c273704dcc9db59ce23873",
+      "retry_calls_sha256": "206633ee111d715cb2fca566ae0e5704469e288ba18177a83a110804575bd857"
+    },
+    "combined_NT2_IH": {
+      "parent_directory": "NT_LLM/runs/stanford_v3_combined_20261114_quotecheck/full",
+      "retry_directory": "NT_LLM/runs/retry_B_combined_20261118T062415Z/combined_NT2_IH/retry_run",
+      "targets": 1,
+      "recovered_usable": 0,
+      "remaining_unusable": 1,
+      "total_primary_usable": 127,
+      "new_failed_attempts": 2,
+      "frozen_configuration_preserved": true,
+      "parent_manifest_sha256": "92f22eca14d1c646ede7587a5e6a680a5786819a7d28cd0fc673cbd9d6117a9e",
+      "retry_manifest_sha256": "00df3875c576fbbb031df25bd169e3959f8d95aa7d96586ce255cafed8c49868",
+      "retry_predictions_sha256": "f7ea117bea6e23936ef382113530374112000eb2966b41ae1ee04c714f2ff2bc",
+      "retry_calls_sha256": "a528ad63a86df43dac21b119e7e5346d38c6668756419a7185f2af9cd0582aba"
+    }
+  },
+  "offline_comparison_directory": "NT_LLM/runs/retry_B_combined_20261118T062415Z/comparison_after_retry"
+}

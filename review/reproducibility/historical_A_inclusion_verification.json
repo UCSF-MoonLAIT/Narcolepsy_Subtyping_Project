@@ -1,0 +1,20 @@
+{
+  "historical_A_inference_rerun": false,
+  "original_prediction_artifacts_unchanged": true,
+  "current_four_label_mapping_applied_to_all_runs": true,
+  "historical_A_primary_eligible": 126,
+  "historical_A_strict_full_record_eligible": 81,
+  "historical_A_actual_prefix_strict_eligible": 80,
+  "three_way_primary_patients": 117,
+  "three_way_primary_subgroup_patients": 31,
+  "three_way_strict_patients": 17,
+  "three_way_strict_subgroup_patients": 5,
+  "existing_B_combined_primary_pair_preserved": 119,
+  "independent_offline_reproduction_matches": true,
+  "matrix_totals_and_class_supports_reconcile": true,
+  "review_decisions_blank": true,
+  "markdown_links_and_anchors_verified": true,
+  "seven_tables_and_four_figures_verified": true,
+  "new_figures_visually_checked": true,
+  "historical_runtime_confounding_disclosed": true
+}

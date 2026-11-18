@@ -1,0 +1,18 @@
+{
+  "tests_passed": 23,
+  "all80_quote_flagged_predictions_in_primary_metrics": true,
+  "original_quote_flags_and_run_errors_retained": true,
+  "v3_primary_eligible": 127,
+  "v3_strict_eligible": 47,
+  "v2_primary_eligible": 120,
+  "v2_strict_eligible": 45,
+  "primary_paired_patients": 119,
+  "strict_paired_patients": 28,
+  "all128_records_reconciled": true,
+  "confusion_matrices_and_class_supports_reconcile": true,
+  "paired_cohorts_are_identical_within_each_policy": true,
+  "strict_cohorts_are_subsets_of_primary": true,
+  "original_predictions_reference_and_prior_report_preserved": true,
+  "no_inference_rerun": true,
+  "reviewer_decisions_remain_blank": true
+}

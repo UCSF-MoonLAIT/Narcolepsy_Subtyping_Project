@@ -1,0 +1,113 @@
+{
+  "gold_patients": 34,
+  "prediction_records": 34,
+  "status_counts": {
+    "valid": 34,
+    "missing_prediction": 0,
+    "unmatched_prediction": 0,
+    "inference_error": 0,
+    "invalid_prediction": 0,
+    "prediction_metadata_mismatch": 0,
+    "quote_quality_failure": 0
+  },
+  "metric_denominator": 34,
+  "expected_record_accuracy": 0.6176470588235294,
+  "prediction_distribution": {
+    "NT1": 3,
+    "NT2_IH": 14,
+    "Uncertain": 4,
+    "Not_NT_IH": 13
+  },
+  "label_order": [
+    "NT1",
+    "NT2_IH",
+    "Uncertain",
+    "Not_NT_IH"
+  ],
+  "label_scheme": "combined",
+  "evaluation_policy": "classification",
+  "quote_quality_counts": {
+    "passed": 11,
+    "flagged": 23,
+    "unavailable": 0,
+    "source_missing": 0,
+    "not_checked": 0
+  },
+  "quote_flagged_predictions_in_metrics": 23,
+  "quote_only_recorded_errors_in_metrics": 23,
+  "label_mapping": {
+    "NT2": "NT2_IH",
+    "IH": "NT2_IH"
+  },
+  "metric_definition": "4-class metrics on eligible matched predictions under classification policy; macro-F1 uses all study labels",
+  "eligibility_definition": "Require complete structural output, valid label and matching metadata. A quote-only recorded error does not exclude a prediction; evidence flags remain visible. Other errors remain excluded.",
+  "provenance": {
+    "reference_sha256": "bf49f8babd4cacf48f70a34c8ca5d5763de61bcb491b0a59cb327cac98002c4b",
+    "predictions_sha256": "df4ab9e8e2f28572672d997b6919a67be7ab66b4a02018b827bab8c3715f02f3",
+    "source_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+    "evaluation_code_sha256": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+    "validation_code_sha256": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+  },
+  "metrics": {
+    "accuracy": 0.6176470588235294,
+    "balanced_accuracy": 0.6398809523809523,
+    "macro_f1": 0.5032051282051282,
+    "weighted_f1": 0.5878582202111613,
+    "per_class": {
+      "NT1": {
+        "support": 1,
+        "predicted_count": 3,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "NT2_IH": {
+        "support": 12,
+        "predicted_count": 14,
+        "precision": 0.7857142857142857,
+        "recall": 0.9166666666666666,
+        "f1": 0.8461538461538461
+      },
+      "Uncertain": {
+        "support": 7,
+        "predicted_count": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "Not_NT_IH": {
+        "support": 14,
+        "predicted_count": 13,
+        "precision": 0.6923076923076923,
+        "recall": 0.6428571428571429,
+        "f1": 0.6666666666666666
+      }
+    }
+  },
+  "confusion_matrix": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      11,
+      0,
+      1
+    ],
+    [
+      1,
+      3,
+      0,
+      3
+    ],
+    [
+      1,
+      0,
+      4,
+      9
+    ]
+  ]
+}

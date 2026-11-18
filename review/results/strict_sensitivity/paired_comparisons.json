@@ -1,0 +1,158 @@
+{
+  "all": {
+    "patients": 28,
+    "label_order": [
+      "NT1",
+      "NT2_IH",
+      "Uncertain",
+      "Not_NT_IH"
+    ],
+    "metrics": {
+      "original_pipeline_B": {
+        "accuracy": 0.5714285714285714,
+        "balanced_accuracy": 0.6333333333333334,
+        "macro_f1": 0.6113782051282051,
+        "per_class": {
+          "NT1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "NT2_IH": {
+            "precision": 0.5,
+            "recall": 0.8333333333333334,
+            "f1": 0.625,
+            "support": 6
+          },
+          "Uncertain": {
+            "precision": 0.125,
+            "recall": 0.2,
+            "f1": 0.15384615384615385,
+            "support": 5
+          },
+          "Not_NT_IH": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 14
+          }
+        }
+      },
+      "combined_NT2_IH": {
+        "accuracy": 0.6785714285714286,
+        "balanced_accuracy": 0.6785714285714286,
+        "macro_f1": 0.6162280701754386,
+        "per_class": {
+          "NT1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "NT2_IH": {
+            "precision": 0.46153846153846156,
+            "recall": 1.0,
+            "f1": 0.631578947368421,
+            "support": 6
+          },
+          "Uncertain": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 5
+          },
+          "Not_NT_IH": {
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333334,
+            "support": 14
+          }
+        }
+      }
+    },
+    "changed": 6,
+    "corrected": 4,
+    "regressed": 1,
+    "both_correct": 15,
+    "both_incorrect": 8
+  },
+  "beyond_cutoff_34": {
+    "patients": 5,
+    "label_order": [
+      "NT1",
+      "NT2_IH",
+      "Uncertain",
+      "Not_NT_IH"
+    ],
+    "metrics": {
+      "original_pipeline_B": {
+        "accuracy": 0.8,
+        "balanced_accuracy": 0.8333333333333333,
+        "macro_f1": 0.45,
+        "per_class": {
+          "NT1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "NT2_IH": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "Uncertain": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "Not_NT_IH": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "support": 3
+          }
+        }
+      },
+      "combined_NT2_IH": {
+        "accuracy": 0.8,
+        "balanced_accuracy": 0.8333333333333333,
+        "macro_f1": 0.45,
+        "per_class": {
+          "NT1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "NT2_IH": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "Uncertain": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "Not_NT_IH": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "support": 3
+          }
+        }
+      }
+    },
+    "changed": 0,
+    "corrected": 0,
+    "regressed": 0,
+    "both_correct": 4,
+    "both_incorrect": 1
+  }
+}

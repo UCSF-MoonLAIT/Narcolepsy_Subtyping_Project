@@ -1,0 +1,29 @@
+# Machine-local settings and environments
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.runtime/
+*.log
+
+# Protected patient-level source data, raw outputs, and local packages.
+# Include only explicitly reviewed live modules and a navigation guide here.
+/NT_LLM/*
+!/NT_LLM/README.md
+!/NT_LLM/validation.py
+!/NT_LLM/label_schemes.py
+!/NT_LLM/narcolepsy_analysis.py
+!/NT_LLM/narcolepsy_report.py
+
+# Superseded experiment code and document snapshots remain local.
+# Only the archive index belongs in the final reviewer-facing commit.
+/archive/*
+!/archive/README.md
+
+# Legacy supervisor can regenerate this local live-status file.
+/REFERENCE_RUN_STATUS.md
+
+# Aggregate JSON, PNG/PDF figures and safe snapshots under review/ are intentional.

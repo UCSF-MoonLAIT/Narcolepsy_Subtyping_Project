@@ -1,0 +1,30 @@
+{
+  "policy_version": "classification-with-separate-quote-quality-v1",
+  "label_scheme": "combined",
+  "primary": "All structurally valid predictions with valid study labels and matching patient/source metadata. Retain quote-only errors as evidence flags, not classification exclusions. Exclude all other recorded errors, missing/unusable predictions, and metadata mismatches.",
+  "strict_sensitivity": "Primary eligibility plus source quote verification using the same validation code and original notes for both v2 and v3.",
+  "paired_metrics": "Use identical eligible-patient intersection independently within each analysis policy.",
+  "failure_handling": "No missing predictions are imputed or converted to Uncertain. Raw run error fields remain unchanged and are exported separately.",
+  "interpretation": "Development-set diagnostic label classification performance, not clinical validation or a claim of fully source-grounded reasoning.",
+  "analysis_code_sha256": {
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/compare_classification.py": "9262137a337b7ba71a551ca98a7a75606bba11ae57ffd6791bc1c1fca224144e",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/compare_coverage.py": "6869ebe6864b06dd38ee868ec10577e6c1ebb531a195a2078460fa1822939eb6",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/submission_tools.py": "7c5376c24dc94349d086a2940604e7d81737015d618598bff41de101b9b0552c",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/narcolepsy_analysis.py": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/validation.py": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+  },
+  "protected_artifacts_sha256": {
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/NT_goldstd_128pt.parquet": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/Stanford_NT_IH_128_sleep_only_2026-07-27_with_first_dx_dates.xlsx": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/stanford_v3_combined_20261114_quotecheck/full/nt_patient_llm_outputs.jsonl": "6448430e6d8fc6c9b8735cc13068919c5c991322d474386ed544c8d74f538405",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/stanford_v3_combined_20261114_quotecheck/full/calls.jsonl": "fd8a463e9af54a34e05e4ba8a1c10e1f79bfb7af98e916532bad4530a2a34dae",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/stanford_v3_combined_20261114_quotecheck/full/run_manifest.json": "92f22eca14d1c646ede7587a5e6a680a5786819a7d28cd0fc673cbd9d6117a9e",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/stanford_v3_combined_20261114_quotecheck/full/prompt_snapshot.txt": "0be792aedce7e03a88c51e2e6971a6eee8b81c3af0832dc917653a736c5cab94",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/coverage_B_reference_20261109/nt_patient_llm_outputs.jsonl": "f17df9e08c4797db432108aa16784e1fdbc6fae60f96139cb32101cc9049f771",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/coverage_B_reference_20261109/calls.jsonl": "d4fe9eb2725fc12b599b916fb14d21f6a6de784cb44bb068fb37d0db9cce91d5",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/coverage_B_reference_20261109/run_manifest.json": "4a110ce0bd66032669b4bc7a93420f01d0b70983d70639ca6f1490f2f68513e1",
+    "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/runs/coverage_B_reference_20261109/prompt_snapshot.txt": "ec7a5994e129f004b618acbc66a127211984f10d5df5af63cbe3238d9a97d6fa"
+  },
+  "original_artifacts_unchanged": true,
+  "inference_rerun": false
+}

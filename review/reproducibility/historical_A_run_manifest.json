@@ -1,0 +1,27 @@
+{
+  "config": {
+    "input": "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/NT_goldstd_128pt.parquet",
+    "input_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+    "gold": "/Users/tongyangwang/Desktop/MoonLAIT/Narcolepsy_Subtyping_Project/NT_LLM/Stanford_NT_IH_128_sleep_only_2026-07-27_with_first_dx_dates.xlsx",
+    "gold_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+    "prompt_file": "stanford_v2.txt",
+    "prompt_sha256": "ec7a5994e129f004b618acbc66a127211984f10d5df5af63cbe3238d9a97d6fa",
+    "model": "qwen3:14b",
+    "max_chars": 7000,
+    "model_options": {
+      "temperature": 0,
+      "top_p": 0.1,
+      "num_ctx": 8192
+    },
+    "imported_predictions": null,
+    "imported_predictions_sha256": null
+  },
+  "started_at": "2026-10-22T00:30:15.723429+00:00",
+  "prediction_source": "local model inference",
+  "model": "qwen3:14b",
+  "prompt_file": "stanford_v2.txt",
+  "prompt_sha256": "ec7a5994e129f004b618acbc66a127211984f10d5df5af63cbe3238d9a97d6fa",
+  "status": "complete_with_issues",
+  "stage": "finished",
+  "finished_at": "2026-10-22T05:57:46.249376+00:00"
+}

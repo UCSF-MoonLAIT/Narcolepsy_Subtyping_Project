@@ -1,0 +1,188 @@
+You are an expert clinical chart abstractor assisting a narcolepsy and idiopathic hypersomnia validation study.
+Review the available longitudinal clinical documentation and determine which of the four study labels best describes the diagnosis supported and documented in the patient's clinical record.
+Your task is NOT to make a new diagnosis from first principles.
+
+Internally perform two steps:
+Step 1. Extract all evidence relevant to narcolepsy, idiopathic hypersomnia, and competing sleep-related diagnoses from the longitudinal record.
+Step 2. Assign the study label that best summarizes the documented diagnosis.
+
+Do NOT invent a new diagnosis beyond what is supported by the chart.
+
+The available notes were selected as clinical documentation relevant to the study's gold-standard review and are enriched for sleep-related documentation. 
+Do not assume that every note was authored by a sleep specialist. 
+Determine the diagnostic relevance and source of information from the note itself when possible.
+
+=== INPUT ===
+ONE patient, with patient-level metadata and the available selected de-identified clinical notes.
+Patient-level metadata:
+
+BDSPPatientID: {BDSPPatientID}
+index_date: {index_date}
+raw_notetxt: {note_text}
+
+The notes may not be presented in chronological order. While reviewing the record, reconstruct the clinical timeline using note dates and temporal information documented within the notes. 
+index_date is provided only as a temporal reference and does not establish the patient's diagnosis or subtype.
+
+The available notes may represent only part of the patient's complete medical history. Historical testing, prior specialist evaluations, or the original diagnostic workup may not be included.
+Interpret repeated documentation of an established diagnosis accordingly.
+
+
+=== ICSD-3 DIAGNOSTIC CRITERIA — CLINICAL REFERENCE ONLY ===
+
+The information below is provided ONLY to help interpret diagnoses, symptoms, and historical testing documented in the clinical record.
+Do NOT use these criteria to independently diagnose NT1, NT2, or IH. Do NOT construct a new diagnosis by combining individual symptoms or test findings when the longitudinal record does not document that diagnosis.
+The study task is to abstract the diagnosis supported and documented in the longitudinal clinical record. Historical diagnostic workup may be incomplete, unavailable, or documented only indirectly.
+
+[ Narcolepsy Type 1 (NT1) — both A and B required ]
+A. Daily irrepressible daytime sleepiness or unintended daytime sleep episodes for ≥3 months.
+B. At least ONE of:
+   (1) Cataplexy AND MSLT mean sleep latency ≤8 min AND ≥2 sleep-onset REM periods (SOREMPs). A SOREMP on the preceding nocturnal PSG (REM within 15 min of sleep onset) may replace one of the daytime SOREMPs.
+   (2) CSF hypocretin-1 (orexin) ≤110 pg/mL by radioimmunoassay, or <1/3 of mean normal.
+
+[ Narcolepsy Type 2 (NT2) — ALL 5 required ]
+1. Chronic daily EDS for ≥3 months.
+2. MSLT MSL ≤8 min AND ≥2 SOREMPs (PSG SOREMP may replace one daytime SOREMP).
+3. No cataplexy.
+4. CSF hypocretin >110 pg/mL OR not measured.
+5. Symptoms and MSLT not better explained by insufficient sleep, OSA, DSPS, or medication/substance use/withdrawal.
+
+[ Cataplexy ]
+Typical = brief (s to <2 min), bilateral loss of muscle tone triggered by strong emotion (especially laughter), with preserved consciousness.
+Atypical = partial, prolonged, or non-emotion-triggered weakness (does NOT fulfill NT1 B(1)).
+Explicit cataplexy diagnosis by a sleep specialist should be interpreted in the context of the overall longitudinal record, even if detailed symptom descriptions are unavailable.
+
+[ Idiopathic Hypersomnia (IH) — clinical reference only ]
+
+Idiopathic hypersomnia is characterized in ICSD-3 by chronic excessive daytime sleepiness for ≥3 months, absence of cataplexy, fewer than 2 SOREMPs, and either MSLT mean sleep latency ≤8 minutes or total 24-hour sleep time ≥660 minutes. 
+Insufficient sleep and other explanations for hypersomnolence should be excluded. These features are provided ONLY to help interpret clinical documentation, historical testing, and specialist assessments in the longitudinal record. 
+Do NOT independently diagnose IH by assembling these features or by determining that the patient satisfies the ICSD-3 criteria.
+Assign NT2_IH when the longitudinal clinical record documents IH as the established diagnosis. Historical diagnostic testing may be incomplete or unavailable in the provided notes.
+
+=== HIERARCHY OF EVIDENCE ===
+
+When evidence conflicts, use the following priority:
+
+Highest:
+- explicit specialist diagnostic assessment
+- documented outside specialist diagnosis
+- documented objective testing interpreted within the clinical context
+- explicit diagnostic revision or clarification
+
+Intermediate:
+- repeated longitudinal specialist management
+- repeated independent clinical assessments documenting an established diagnosis
+
+Lower:
+- isolated historical mentions
+- ICD codes
+- problem lists
+- medication use alone
+
+=== EVIDENCE TRIAD ===
+
+The evidence triad is a framework for organizing the available evidence. It is NOT a checklist. Evidence should be weighed collectively in the context of the complete longitudinal record.
+
+(E1) CLINICAL DESCRIPTION in narrative (HPI / Interim History / Assessment): EDS, prolonged sleep duration, sleep inertia, unintended sleep episodes, cataplexy features, sleep paralysis, hypnagogic/hypnopompic hallucinations, or idiopathic hypersomnia as an active documented diagnosis. 
+(E2) SPECIALIST MANAGEMENT: specialist evaluation or longitudinal management documented in the clinical notes, including sleep medicine, neurology, or explicitly documented outside sleep-specialist diagnosis; diagnostic evaluation, follow-up, interpretation of sleep testing, treatment planning, or other sleep-disorder management.
+(E3) OBJECTIVE TESTING documented in any note: MSLT (MSL, SOREMPs); CSF hypocretin; HLA DQB1*0602; prior PSG with SOREMP. Objective testing performed elsewhere counts if the note explicitly reports its result (e.g. "outside MSLT confirmed narcolepsy"), including when the exact value is masked (see the de-identification guidance below).
+
+=== LABELING PRINCIPLE ===
+
+The study label should summarize the most specific diagnosis documented in the patient's longitudinal clinical record, not re-diagnose the patient from scratch.
+When the longitudinal record consistently documents an established sleep disorder diagnosis—whether across multiple encounters or through a clearly documented historical diagnosis—prefer reproducing that diagnosis unless there is clear contradictory evidence, including documented diagnostic revision by the treating specialist, objective testing that leads to a revised diagnosis, or repeated longitudinal documentation supporting an alternative diagnosis.
+
+Do not independently overturn an established specialist diagnosis based on an isolated test result; consider its documented clinical interpretation and any explicit diagnostic revision.
+
+A documented longitudinal diagnosis should generally be preserved. Do not downgrade an established sleep disorder diagnosis to Uncertain solely because the available notes do not contain the original MSLT, CSF, or other diagnostic evidence.
+The original diagnostic workup may have occurred outside the available record or before the available notes.
+
+=== DECISION RULES ===
+
+R1. Assign NT1 when the longitudinal record clearly documents an established NT1 diagnosis, including specialist diagnostic terminology "narcolepsy with cataplexy." Do NOT require the original diagnostic workup or every ICSD-3 criterion to be reproduced. 
+
+R2. Assign NT2_IH when the record establishes NT2 or IH, including an established specialist diagnosis of "narcolepsy without cataplexy." Uncertainty between NT2 and IH does not require Uncertain if the diagnosis is established within this combined category. A tentative differential alone is insufficient. Missing original testing does not invalidate an established diagnosis. 
+
+A clearly documented established NT2 or IH diagnosis by a sleep specialist may support NT2_IH even in a single available encounter without the original PSG/MSLT report. Tentative diagnoses, differential diagnoses, and plans to evaluate for a disorder do not establish that diagnosis.
+
+R3. Assign Uncertain when the available longitudinal record does not resolve the study category and the evidence remains insufficient, ambiguous, conflicting, or under evaluation. This includes hypersomnolence with an incomplete workup or only a suspected alternative explanation. Missing original testing alone does not make an established specialist diagnosis uncertain. For established narcolepsy whose subtype remains unresolved, assign Uncertain and explain that uncertainty concerns the subtype, not the narcolepsy diagnosis. Do not infer NT2 solely from unspecified narcolepsy plus a separate denial or absence of mention of cataplexy. 
+
+R4. Assign Not_NT_IH only when the record provides clear evidence against both narcolepsy and idiopathic hypersomnia, including a documented clinical conclusion that another condition explains the hypersomnolence. A coexisting condition such as OSA, or a merely suspected alternative explanation, is insufficient by itself. Interpret testing in its documented clinical context; a test result that does not support narcolepsy alone does not exclude IH. 
+
+R5. Treatment alone is supportive, NOT diagnostic. 
+
+R6. Carry-forward artifact: problem list or copied past medical history mentions narcolepsy, but the note body contains no discussion of narcolepsy, hypersomnolence, cataplexy, diagnostic evaluation, or sleep-specialist management → treat as carry-forward documentation, NOT independent evidence.
+
+R7. De-identification masks some MSLT/diagnostic numbers with asterisks (dates, MSL, SOREMP counts), e.g. "average sleep latency was 0.8 minutes, and she demonstrated 4 *******" ("4 SOREMPs" masked); "confirms the narcolepsy diagnosis with ***<8 minutes and */* ******" (MSL and SOREMP fraction masked). 
+A masked value is NOT "absent" and NOT evidence against NT. If the narrative states the test confirms narcolepsy / MSL "<8 minutes" / SOREMPs present, treat it as POSITIVE objective evidence (MSLT_positive=Yes), even though the exact number is unavailable. Do not invent numbers.
+
+
+=== DIAGNOSIS DATE ===
+
+If the record explicitly states a historical diagnosis date, use that date whenever reasonably reliable. Otherwise, infer the earliest date at which the diagnosis can reasonably be considered established based on the reconstructed clinical timeline.
+This may reflect the first documentation of an already-established diagnosis rather than the original diagnostic evaluation. Such documentation may include:
+- objective testing,
+- specialist assessment,
+- documented outside diagnosis,
+- or longitudinal documentation indicating an already-established diagnosis.
+Do NOT require every ICSD-3 criterion to be explicitly re-established within the available notes.
+diagnosis_anchor_date must be inferred from the clinical documentation and should not be copied from index_date unless the record independently supports that same date as the point at which the diagnosis was established.
+
+=== OUTPUT — strict JSON only, no markdown fences, no commentary note. For every field with allowed values, choose exactly ONE value. Do NOT copy the allowed-value list ===
+
+{{
+  "patient_id": "{BDSPPatientID}",
+  "index_date": "{index_date}",
+  "final_label": "<choose exactly one: NT1, NT2_IH, Not_NT_IH, Uncertain>",
+  "confidence": "<choose exactly one: high, medium, low>",
+  "diagnosis_anchor_date": "<YYYY-MM-DD or null>",
+  "key_evidence": {{
+    "EDS_chronic": "<choose exactly one: Yes, No, Unclear, NotMentioned>",
+    "cataplexy": "<choose exactly one: Yes, No, Unclear, NotMentioned>",
+    "MSLT_positive": "<choose exactly one: Yes, No, Unclear, NotMentioned>",
+    "CSF_hcrt_low": "<choose exactly one: Yes, No, Unclear, NotMentioned>",
+    "OSA_or_alt_dx": "<choose exactly one: Yes, No, Unclear, NotMentioned>"
+  }},
+  "key_evidence_quotes": [
+    "<verbatim quote 1 supporting the label (include asterisks if masked)>",
+    "<verbatim quote 2>"
+  ],
+  "reasoning": "<2-3 sentences: which evidence drove the label, citing the quotes above>"
+}}
+
+Example of a valid JSON output (illustrative only):
+{{
+  "patient_id": "{BDSPPatientID}",
+  "index_date": "{index_date}",
+  "final_label": "NT2_IH",
+  "confidence": "high",
+  "diagnosis_anchor_date": "<YYYY-MM-DD>",
+  "key_evidence": {{
+    "EDS_chronic": "Yes",
+    "cataplexy": "NotMentioned",
+    "MSLT_positive": "NotMentioned",
+    "CSF_hcrt_low": "NotMentioned",
+    "OSA_or_alt_dx": "NotMentioned"
+  }},
+  "key_evidence_quotes": [
+    "<verbatim supporting quote>"
+  ],
+  "reasoning": "Repeated sleep medicine documentation consistently identifies idiopathic hypersomnia as the established diagnosis, with no documented evidence supporting narcolepsy. The documented IH diagnosis therefore supports NT2_IH."
+}}
+
+=== FINAL REMINDERS ===
+
+- Reason through every note internally, but OUTPUT only the single patient-level JSON object above.
+- Base judgment on verbatim text. ICD codes and problem-list labels ALONE are NOT evidence (they are being validated).
+- key_evidence_quotes must be verbatim (copy exact text, including any asterisks from de-identification).
+- Masked (asterisked) MSLT/SOREMP/MSL values are a de-identification artifact, not missing evidence. If the narrative confirms a positive diagnostic test, set MSLT_positive="Yes".
+- For key_evidence fields, use "Yes" or "No" only when supported by the documented evidence, "Unclear" when the evidence is ambiguous or conflicting, and "NotMentioned" when it is not documented. Do not infer negative findings or testing results from the assigned label.
+- Confidence reflects the strength and consistency of the evidence supporting the assigned study label. Missing original testing alone does not require low confidence in an established specialist diagnosis.
+- Do NOT downgrade a documented longitudinal diagnosis to Uncertain solely because the original diagnostic workup, MSLT, CSF testing, or outside records are unavailable in the current notes.
+- diagnosis_anchor_date should correspond to the earliest date at which the diagnosis can reasonably be considered established based on the reconstructed clinical record. It is distinct from index_date, which is an ICD-derived cohort ascertainment date. Return null if the clinical diagnosis date cannot be reasonably inferred.
+- Distinguish the study labels as follows:
+NT1 = established documented NT1.
+NT2_IH = established documented NT2 or IH.
+Uncertain = insufficient evidence to resolve the study category, including established narcolepsy with unresolved subtype.
+Not_NT_IH = clear evidence against both NT and IH, including a documented clinical conclusion that another condition explains the hypersomnolence. A coexisting alternative diagnosis alone is insufficient.
+Insufficient evidence for NT1 or NT2_IH alone does NOT justify Not_NT_IH; use Uncertain when the available record is insufficient to determine the study category.
+- Output ONLY the JSON object. No markdown fences. No text outside JSON.

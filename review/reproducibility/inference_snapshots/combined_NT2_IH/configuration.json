@@ -1,0 +1,33 @@
+{
+  "strategy": "B",
+  "input_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+  "gold_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+  "prompt_file": "stanford_v3.txt",
+  "prompt_sha256": "0be792aedce7e03a88c51e2e6971a6eee8b81c3af0832dc917653a736c5cab94",
+  "label_scheme": "combined",
+  "model": "qwen3:14b",
+  "model_digest": "sha256:a8cc1361f3145dc01f6d77c6c82c9116b9ffe3c97b34716fe20418455876c40e",
+  "model_manifest_sha256": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+  "options": {
+    "temperature": 0,
+    "top_p": 0.1,
+    "num_ctx": 40960,
+    "num_predict": 2048
+  },
+  "think": false,
+  "safety_tokens": 128,
+  "sources": {
+    "coverage_pipeline.py": "e2581ee683fc7b21c643bab8e412c51f3ef723dd749a65719ad683268aee42f8",
+    "narcolepsy_stanford.py": "0784c4b4cd46392e3ce98eed550b3723f97d7343ae84ab9145959f1e72528d8c",
+    "NT_LLM/label_schemes.py": "947f086e83e9f62a3f2301dbbbe542a18b3028dcdba0c4086b0bded740a66847",
+    "NT_LLM/narcolepsy_analysis.py": "0fb959b41f376e30f795bb9c59d2bf2501fe7d1f6ca8806d11cc5331d43df80f",
+    "NT_LLM/narcolepsy_report.py": "9838e9c632f2ea0c99a09ad1cb0835d5a3a2e7df2a21879195fde09415378d56",
+    "NT_LLM/validation.py": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+  },
+  "packages": {
+    "ollama": "0.6.2",
+    "tokenizers": "0.23.3",
+    "gguf": "0.19.0",
+    "pandas": "3.0.0"
+  }
+}

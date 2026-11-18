@@ -1,0 +1,54 @@
+{
+  "audit_date": "2026-11-18",
+  "scope": "Intermediate reviewer-facing repository; no inference or specialist clinical adjudication",
+  "content_readiness": "PASS for the stated development-set computational scope",
+  "formal_repository_freeze": "NOT YET: no Git commit or tracked files at audit time",
+  "remaining_formal_blocker": "Create a local Git commit of the exact final allowlist, then record the commit hash. No commit, staging or tag was performed by this audit.",
+  "checks": {
+    "review_manifest_initially_complete_and_valid": true,
+    "independent_saved_output_evaluation_exact_match": true,
+    "all_seven_tables_verified_cell_by_cell": true,
+    "aggregate_confusion_matrices_verified": 36,
+    "actual_input_scope_sensitivity_reproduced": true,
+    "four_data_free_figures_pixel_identical": true,
+    "data_free_test_count": 23,
+    "no_new_inference": true,
+    "protected_original_artifact_files_unchanged": 1509,
+    "live_code_prompt_and_requirement_files_unchanged": 25,
+    "known_patient_identifiers_in_versionable_text": 0,
+    "patient_data_format_files_in_versionable_set": 0,
+    "private_key_markers_in_versionable_text": 0,
+    "Git_visible_only_copy_contains_no_raw_notes_or_runs": true,
+    "candidate_python_files_parse": true,
+    "all_archive_content_excluded_except_index": true,
+    "current_document_links_and_anchors_checked": 105,
+    "private_data_links_only_in_optional_specialist_notes": 7
+  },
+  "git_state_at_audit": {
+    "git_has_commit": false,
+    "git_head": null,
+    "tracked_files": 0
+  },
+  "limitations_not_freeze_blockers": [
+    "Development-set reuse; no independent validation, confidence intervals or hypothesis tests.",
+    "Primary eligibility selected after execution; historical A runtime/model equivalence incomplete and clearly disclosed.",
+    "No new specialist clinical adjudication; no clinical-validation claim.",
+    "Patient-level recomputation requires authorized local data; only aggregate viewing/figure regeneration is data-free.",
+    "Dependency environment was recorded, but no fresh dependency installation was tested.",
+    "Generic legacy native-label handoff export is not the canonical mapped A evaluation; the supported offline comparison and A-specific exports were verified."
+  ],
+  "final_commit_policy": "Current code/tests/prompts/docs and aggregate review tree; archive index only; raw data, runs, private exports and legacy archives excluded.",
+  "source_logs": "Detailed logs and Git-visible-only test copy retained in local temporary audit workspace; patient-level recomputed outputs are not included in Git.",
+  "final_commit_files": 120,
+  "final_commit_group_counts": {
+    "Root configuration, README and live entry points": 13,
+    "Live helper modules and local-data index": 5,
+    "Reviewer documentation and audit/commit scope": 11,
+    "Prompt templates and guide": 3,
+    "Synthetic or mocked tests": 8,
+    "Aggregate review snapshot and reproducibility records": 79,
+    "Historical index only": 1
+  },
+  "final_commit_allowlist": "docs/FINAL_COMMIT_FILES.txt",
+  "final_commit_allowlist_sha256": "aa01eb1f651c98abe053fdee05860251fe138f922c1ba0e74020935969395ea5"
+}

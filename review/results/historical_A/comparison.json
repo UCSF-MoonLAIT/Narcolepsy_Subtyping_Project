@@ -1,0 +1,2928 @@
+{
+  "description": "Retrospective descriptive four-label comparison of historical prefix A, complete-source original B and combined NT2/IH; not a controlled truncation experiment.",
+  "source_quote_verification": "Common strict analysis checks original full supplied record for every run. A-prefix quote verification is additionally reported separately because A received only the first 7000 characters.",
+  "label_order": [
+    "NT1",
+    "NT2_IH",
+    "Uncertain",
+    "Not_NT_IH"
+  ],
+  "policies": {
+    "classification": {
+      "individual": {
+        "historical_A": {
+          "gold_patients": 128,
+          "prediction_records": 128,
+          "status_counts": {
+            "valid": 126,
+            "missing_prediction": 0,
+            "unmatched_prediction": 0,
+            "inference_error": 0,
+            "invalid_prediction": 2,
+            "prediction_metadata_mismatch": 0,
+            "quote_quality_failure": 0
+          },
+          "metric_denominator": 126,
+          "expected_record_accuracy": 0.296875,
+          "prediction_distribution": {
+            "NT1": 11,
+            "NT2_IH": 12,
+            "Uncertain": 93,
+            "Not_NT_IH": 11
+          },
+          "label_order": [
+            "NT1",
+            "NT2_IH",
+            "Uncertain",
+            "Not_NT_IH"
+          ],
+          "label_scheme": "combined",
+          "evaluation_policy": "classification",
+          "quote_quality_counts": {
+            "passed": 81,
+            "flagged": 46,
+            "unavailable": 1,
+            "source_missing": 0,
+            "not_checked": 0
+          },
+          "quote_flagged_predictions_in_metrics": 45,
+          "quote_only_recorded_errors_in_metrics": 0,
+          "label_mapping": {
+            "NT2": "NT2_IH",
+            "IH": "NT2_IH"
+          },
+          "metric_definition": "4-class metrics on eligible matched predictions under classification policy; macro-F1 uses all study labels",
+          "eligibility_definition": "Require complete structural output, valid label and matching metadata. A quote-only recorded error does not exclude a prediction; evidence flags remain visible. Other errors remain excluded.",
+          "provenance": {
+            "reference_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+            "predictions_sha256": "928863874abd69912873d9cbef75aa83f2e4079f25030c1a7cb0e5e2df62e3c7",
+            "source_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+            "evaluation_code_sha256": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+            "validation_code_sha256": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+          },
+          "metrics": {
+            "accuracy": 0.30158730158730157,
+            "balanced_accuracy": 0.39664918414918415,
+            "macro_f1": 0.3481605975723623,
+            "weighted_f1": 0.267143894594875,
+            "per_class": {
+              "NT1": {
+                "support": 15,
+                "predicted_count": 10,
+                "precision": 0.9,
+                "recall": 0.6,
+                "f1": 0.72
+              },
+              "NT2_IH": {
+                "support": 33,
+                "predicted_count": 12,
+                "precision": 0.3333333333333333,
+                "recall": 0.12121212121212122,
+                "f1": 0.17777777777777778
+              },
+              "Uncertain": {
+                "support": 26,
+                "predicted_count": 93,
+                "precision": 0.21505376344086022,
+                "recall": 0.7692307692307693,
+                "f1": 0.33613445378151263
+              },
+              "Not_NT_IH": {
+                "support": 52,
+                "predicted_count": 11,
+                "precision": 0.45454545454545453,
+                "recall": 0.09615384615384616,
+                "f1": 0.15873015873015872
+              }
+            }
+          },
+          "confusion_matrix": [
+            [
+              9,
+              1,
+              5,
+              0
+            ],
+            [
+              0,
+              4,
+              26,
+              3
+            ],
+            [
+              0,
+              3,
+              20,
+              3
+            ],
+            [
+              1,
+              4,
+              42,
+              5
+            ]
+          ]
+        },
+        "original_B": {
+          "gold_patients": 128,
+          "prediction_records": 128,
+          "status_counts": {
+            "valid": 120,
+            "missing_prediction": 0,
+            "unmatched_prediction": 0,
+            "inference_error": 8,
+            "invalid_prediction": 0,
+            "prediction_metadata_mismatch": 0,
+            "quote_quality_failure": 0
+          },
+          "metric_denominator": 120,
+          "expected_record_accuracy": 0.5390625,
+          "prediction_distribution": {
+            "NT1": 16,
+            "NT2_IH": 57,
+            "Uncertain": 29,
+            "Not_NT_IH": 18
+          },
+          "label_order": [
+            "NT1",
+            "NT2_IH",
+            "Uncertain",
+            "Not_NT_IH"
+          ],
+          "label_scheme": "combined",
+          "evaluation_policy": "classification",
+          "quote_quality_counts": {
+            "passed": 45,
+            "flagged": 75,
+            "unavailable": 8,
+            "source_missing": 0,
+            "not_checked": 0
+          },
+          "quote_flagged_predictions_in_metrics": 75,
+          "quote_only_recorded_errors_in_metrics": 0,
+          "label_mapping": {
+            "NT2": "NT2_IH",
+            "IH": "NT2_IH"
+          },
+          "metric_definition": "4-class metrics on eligible matched predictions under classification policy; macro-F1 uses all study labels",
+          "eligibility_definition": "Require complete structural output, valid label and matching metadata. A quote-only recorded error does not exclude a prediction; evidence flags remain visible. Other errors remain excluded.",
+          "provenance": {
+            "reference_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+            "predictions_sha256": "21397aec4f86d8f375b8a65733c042c2a9e75fa916c273704dcc9db59ce23873",
+            "source_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+            "evaluation_code_sha256": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+            "validation_code_sha256": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+          },
+          "metrics": {
+            "accuracy": 0.575,
+            "balanced_accuracy": 0.6266505006257822,
+            "macro_f1": 0.5907452863630587,
+            "weighted_f1": 0.557821326573609,
+            "per_class": {
+              "NT1": {
+                "support": 15,
+                "predicted_count": 16,
+                "precision": 0.875,
+                "recall": 0.9333333333333333,
+                "f1": 0.9032258064516129
+              },
+              "NT2_IH": {
+                "support": 34,
+                "predicted_count": 57,
+                "precision": 0.5614035087719298,
+                "recall": 0.9411764705882353,
+                "f1": 0.7032967032967034
+              },
+              "Uncertain": {
+                "support": 24,
+                "predicted_count": 29,
+                "precision": 0.2413793103448276,
+                "recall": 0.2916666666666667,
+                "f1": 0.2641509433962264
+              },
+              "Not_NT_IH": {
+                "support": 47,
+                "predicted_count": 18,
+                "precision": 0.8888888888888888,
+                "recall": 0.3404255319148936,
+                "f1": 0.49230769230769234
+              }
+            }
+          },
+          "confusion_matrix": [
+            [
+              14,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              32,
+              1,
+              1
+            ],
+            [
+              1,
+              15,
+              7,
+              1
+            ],
+            [
+              1,
+              9,
+              21,
+              16
+            ]
+          ]
+        },
+        "combined_NT2_IH": {
+          "gold_patients": 128,
+          "prediction_records": 128,
+          "status_counts": {
+            "valid": 127,
+            "missing_prediction": 0,
+            "unmatched_prediction": 0,
+            "inference_error": 1,
+            "invalid_prediction": 0,
+            "prediction_metadata_mismatch": 0,
+            "quote_quality_failure": 0
+          },
+          "metric_denominator": 127,
+          "expected_record_accuracy": 0.5625,
+          "prediction_distribution": {
+            "NT1": 17,
+            "NT2_IH": 67,
+            "Uncertain": 16,
+            "Not_NT_IH": 27
+          },
+          "label_order": [
+            "NT1",
+            "NT2_IH",
+            "Uncertain",
+            "Not_NT_IH"
+          ],
+          "label_scheme": "combined",
+          "evaluation_policy": "classification",
+          "quote_quality_counts": {
+            "passed": 47,
+            "flagged": 80,
+            "unavailable": 1,
+            "source_missing": 0,
+            "not_checked": 0
+          },
+          "quote_flagged_predictions_in_metrics": 80,
+          "quote_only_recorded_errors_in_metrics": 80,
+          "label_mapping": {
+            "NT2": "NT2_IH",
+            "IH": "NT2_IH"
+          },
+          "metric_definition": "4-class metrics on eligible matched predictions under classification policy; macro-F1 uses all study labels",
+          "eligibility_definition": "Require complete structural output, valid label and matching metadata. A quote-only recorded error does not exclude a prediction; evidence flags remain visible. Other errors remain excluded.",
+          "provenance": {
+            "reference_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+            "predictions_sha256": "f7ea117bea6e23936ef382113530374112000eb2966b41ae1ee04c714f2ff2bc",
+            "source_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+            "evaluation_code_sha256": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+            "validation_code_sha256": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+          },
+          "metrics": {
+            "accuracy": 0.5669291338582677,
+            "balanced_accuracy": 0.6063584087481146,
+            "macro_f1": 0.5624284955968124,
+            "weighted_f1": 0.5399490195623351,
+            "per_class": {
+              "NT1": {
+                "support": 16,
+                "predicted_count": 17,
+                "precision": 0.8823529411764706,
+                "recall": 0.9375,
+                "f1": 0.9090909090909091
+              },
+              "NT2_IH": {
+                "support": 34,
+                "predicted_count": 67,
+                "precision": 0.47761194029850745,
+                "recall": 0.9411764705882353,
+                "f1": 0.6336633663366337
+              },
+              "Uncertain": {
+                "support": 26,
+                "predicted_count": 16,
+                "precision": 0.1875,
+                "recall": 0.11538461538461539,
+                "f1": 0.14285714285714285
+              },
+              "Not_NT_IH": {
+                "support": 51,
+                "predicted_count": 27,
+                "precision": 0.8148148148148148,
+                "recall": 0.43137254901960786,
+                "f1": 0.5641025641025641
+              }
+            }
+          },
+          "confusion_matrix": [
+            [
+              15,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              32,
+              0,
+              2
+            ],
+            [
+              1,
+              19,
+              3,
+              3
+            ],
+            [
+              1,
+              15,
+              13,
+              22
+            ]
+          ]
+        }
+      },
+      "pairwise": {
+        "historical_A_vs_original_B": {
+          "all": {
+            "patients": 118,
+            "metrics": {
+              "historical_A": {
+                "correct": 37,
+                "accuracy": 0.3135593220338983,
+                "balanced_accuracy": 0.41552972736483373,
+                "macro_f1": 0.36216772993088786,
+                "per_class": {
+                  "NT1": {
+                    "support": 14,
+                    "precision": 0.9,
+                    "recall": 0.6428571428571429,
+                    "f1": 0.75
+                  },
+                  "NT2_IH": {
+                    "support": 33,
+                    "precision": 0.3333333333333333,
+                    "recall": 0.12121212121212122,
+                    "f1": 0.17777777777777778
+                  },
+                  "Uncertain": {
+                    "support": 24,
+                    "precision": 0.22093023255813954,
+                    "recall": 0.7916666666666666,
+                    "f1": 0.34545454545454546
+                  },
+                  "Not_NT_IH": {
+                    "support": 47,
+                    "precision": 0.5,
+                    "recall": 0.10638297872340426,
+                    "f1": 0.17543859649122806
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    9,
+                    1,
+                    4,
+                    0
+                  ],
+                  [
+                    0,
+                    4,
+                    26,
+                    3
+                  ],
+                  [
+                    0,
+                    3,
+                    19,
+                    2
+                  ],
+                  [
+                    1,
+                    4,
+                    37,
+                    5
+                  ]
+                ]
+              },
+              "original_B": {
+                "correct": 67,
+                "accuracy": 0.5677966101694916,
+                "balanced_accuracy": 0.625014391636732,
+                "macro_f1": 0.5874098933312489,
+                "per_class": {
+                  "NT1": {
+                    "support": 14,
+                    "precision": 0.8666666666666667,
+                    "recall": 0.9285714285714286,
+                    "f1": 0.896551724137931
+                  },
+                  "NT2_IH": {
+                    "support": 33,
+                    "precision": 0.5535714285714286,
+                    "recall": 0.9393939393939394,
+                    "f1": 0.6966292134831461
+                  },
+                  "Uncertain": {
+                    "support": 24,
+                    "precision": 0.2413793103448276,
+                    "recall": 0.2916666666666667,
+                    "f1": 0.2641509433962264
+                  },
+                  "Not_NT_IH": {
+                    "support": 47,
+                    "precision": 0.8888888888888888,
+                    "recall": 0.3404255319148936,
+                    "f1": 0.49230769230769234
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    13,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    31,
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    15,
+                    7,
+                    1
+                  ],
+                  [
+                    1,
+                    9,
+                    21,
+                    16
+                  ]
+                ]
+              }
+            },
+            "corrected": 48,
+            "regressed": 18
+          },
+          "beyond_cutoff_34": {
+            "patients": 31,
+            "metrics": {
+              "historical_A": {
+                "correct": 5,
+                "accuracy": 0.16129032258064516,
+                "balanced_accuracy": 0.24786324786324787,
+                "macro_f1": 0.09083191850594227,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 12,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Uncertain": {
+                    "support": 6,
+                    "precision": 0.16,
+                    "recall": 0.6666666666666666,
+                    "f1": 0.25806451612903225
+                  },
+                  "Not_NT_IH": {
+                    "support": 13,
+                    "precision": 0.16666666666666666,
+                    "recall": 0.07692307692307693,
+                    "f1": 0.10526315789473684
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    9,
+                    3
+                  ],
+                  [
+                    0,
+                    0,
+                    4,
+                    2
+                  ],
+                  [
+                    0,
+                    0,
+                    12,
+                    1
+                  ]
+                ]
+              },
+              "original_B": {
+                "correct": 19,
+                "accuracy": 0.6129032258064516,
+                "balanced_accuracy": 0.5705128205128205,
+                "macro_f1": 0.4258241758241758,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 12,
+                    "precision": 0.7857142857142857,
+                    "recall": 0.9166666666666666,
+                    "f1": 0.8461538461538461
+                  },
+                  "Uncertain": {
+                    "support": 6,
+                    "precision": 0.25,
+                    "recall": 0.3333333333333333,
+                    "f1": 0.2857142857142857
+                  },
+                  "Not_NT_IH": {
+                    "support": 13,
+                    "precision": 0.75,
+                    "recall": 0.46153846153846156,
+                    "f1": 0.5714285714285714
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    11,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    2,
+                    2,
+                    1
+                  ],
+                  [
+                    0,
+                    1,
+                    6,
+                    6
+                  ]
+                ]
+              }
+            },
+            "corrected": 17,
+            "regressed": 3
+          }
+        },
+        "historical_A_vs_combined_NT2_IH": {
+          "all": {
+            "patients": 125,
+            "metrics": {
+              "historical_A": {
+                "correct": 38,
+                "accuracy": 0.304,
+                "balanced_accuracy": 0.39712052653229124,
+                "macro_f1": 0.34951278780147016,
+                "per_class": {
+                  "NT1": {
+                    "support": 15,
+                    "precision": 0.9,
+                    "recall": 0.6,
+                    "f1": 0.72
+                  },
+                  "NT2_IH": {
+                    "support": 33,
+                    "precision": 0.3333333333333333,
+                    "recall": 0.12121212121212122,
+                    "f1": 0.17777777777777778
+                  },
+                  "Uncertain": {
+                    "support": 26,
+                    "precision": 0.21739130434782608,
+                    "recall": 0.7692307692307693,
+                    "f1": 0.3389830508474576
+                  },
+                  "Not_NT_IH": {
+                    "support": 51,
+                    "precision": 0.45454545454545453,
+                    "recall": 0.09803921568627451,
+                    "f1": 0.16129032258064516
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    9,
+                    1,
+                    5,
+                    0
+                  ],
+                  [
+                    0,
+                    4,
+                    26,
+                    3
+                  ],
+                  [
+                    0,
+                    3,
+                    20,
+                    3
+                  ],
+                  [
+                    1,
+                    4,
+                    41,
+                    5
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 70,
+                "accuracy": 0.56,
+                "balanced_accuracy": 0.604871109282874,
+                "macro_f1": 0.5591120349184866,
+                "per_class": {
+                  "NT1": {
+                    "support": 15,
+                    "precision": 0.875,
+                    "recall": 0.9333333333333333,
+                    "f1": 0.9032258064516129
+                  },
+                  "NT2_IH": {
+                    "support": 33,
+                    "precision": 0.4696969696969697,
+                    "recall": 0.9393939393939394,
+                    "f1": 0.6262626262626263
+                  },
+                  "Uncertain": {
+                    "support": 26,
+                    "precision": 0.1875,
+                    "recall": 0.11538461538461539,
+                    "f1": 0.14285714285714285
+                  },
+                  "Not_NT_IH": {
+                    "support": 51,
+                    "precision": 0.8148148148148148,
+                    "recall": 0.43137254901960786,
+                    "f1": 0.5641025641025641
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    14,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    31,
+                    0,
+                    2
+                  ],
+                  [
+                    1,
+                    19,
+                    3,
+                    3
+                  ],
+                  [
+                    1,
+                    15,
+                    13,
+                    22
+                  ]
+                ]
+              }
+            },
+            "corrected": 51,
+            "regressed": 19
+          },
+          "beyond_cutoff_34": {
+            "patients": 34,
+            "metrics": {
+              "historical_A": {
+                "correct": 5,
+                "accuracy": 0.14705882352941177,
+                "balanced_accuracy": 0.1607142857142857,
+                "macro_f1": 0.08263305322128851,
+                "per_class": {
+                  "NT1": {
+                    "support": 1,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 12,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Uncertain": {
+                    "support": 7,
+                    "precision": 0.14814814814814814,
+                    "recall": 0.5714285714285714,
+                    "f1": 0.23529411764705882
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 0.14285714285714285,
+                    "recall": 0.07142857142857142,
+                    "f1": 0.09523809523809523
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    9,
+                    3
+                  ],
+                  [
+                    0,
+                    0,
+                    4,
+                    3
+                  ],
+                  [
+                    0,
+                    0,
+                    13,
+                    1
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 21,
+                "accuracy": 0.6176470588235294,
+                "balanced_accuracy": 0.6398809523809523,
+                "macro_f1": 0.5032051282051282,
+                "per_class": {
+                  "NT1": {
+                    "support": 1,
+                    "precision": 0.3333333333333333,
+                    "recall": 1.0,
+                    "f1": 0.5
+                  },
+                  "NT2_IH": {
+                    "support": 12,
+                    "precision": 0.7857142857142857,
+                    "recall": 0.9166666666666666,
+                    "f1": 0.8461538461538461
+                  },
+                  "Uncertain": {
+                    "support": 7,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 0.6923076923076923,
+                    "recall": 0.6428571428571429,
+                    "f1": 0.6666666666666666
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    1,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    11,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    3,
+                    0,
+                    3
+                  ],
+                  [
+                    1,
+                    0,
+                    4,
+                    9
+                  ]
+                ]
+              }
+            },
+            "corrected": 20,
+            "regressed": 4
+          }
+        },
+        "original_B_vs_combined_NT2_IH": {
+          "all": {
+            "patients": 119,
+            "metrics": {
+              "original_B": {
+                "correct": 69,
+                "accuracy": 0.5798319327731093,
+                "balanced_accuracy": 0.6285006393861893,
+                "macro_f1": 0.5939383197447714,
+                "per_class": {
+                  "NT1": {
+                    "support": 15,
+                    "precision": 0.875,
+                    "recall": 0.9333333333333333,
+                    "f1": 0.9032258064516129
+                  },
+                  "NT2_IH": {
+                    "support": 34,
+                    "precision": 0.5614035087719298,
+                    "recall": 0.9411764705882353,
+                    "f1": 0.7032967032967034
+                  },
+                  "Uncertain": {
+                    "support": 24,
+                    "precision": 0.25,
+                    "recall": 0.2916666666666667,
+                    "f1": 0.2692307692307692
+                  },
+                  "Not_NT_IH": {
+                    "support": 46,
+                    "precision": 0.8888888888888888,
+                    "recall": 0.34782608695652173,
+                    "f1": 0.5
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    14,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    32,
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    15,
+                    7,
+                    1
+                  ],
+                  [
+                    1,
+                    9,
+                    20,
+                    16
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 69,
+                "accuracy": 0.5798319327731093,
+                "balanced_accuracy": 0.6035912190963342,
+                "macro_f1": 0.561471553334343,
+                "per_class": {
+                  "NT1": {
+                    "support": 15,
+                    "precision": 0.875,
+                    "recall": 0.9333333333333333,
+                    "f1": 0.9032258064516129
+                  },
+                  "NT2_IH": {
+                    "support": 34,
+                    "precision": 0.48484848484848486,
+                    "recall": 0.9411764705882353,
+                    "f1": 0.64
+                  },
+                  "Uncertain": {
+                    "support": 24,
+                    "precision": 0.16666666666666666,
+                    "recall": 0.08333333333333333,
+                    "f1": 0.1111111111111111
+                  },
+                  "Not_NT_IH": {
+                    "support": 46,
+                    "precision": 0.84,
+                    "recall": 0.45652173913043476,
+                    "f1": 0.5915492957746479
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    14,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    32,
+                    0,
+                    2
+                  ],
+                  [
+                    1,
+                    19,
+                    2,
+                    2
+                  ],
+                  [
+                    1,
+                    14,
+                    10,
+                    21
+                  ]
+                ]
+              }
+            },
+            "corrected": 7,
+            "regressed": 7
+          },
+          "beyond_cutoff_34": {
+            "patients": 31,
+            "metrics": {
+              "original_B": {
+                "correct": 19,
+                "accuracy": 0.6129032258064516,
+                "balanced_accuracy": 0.5705128205128205,
+                "macro_f1": 0.4258241758241758,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 12,
+                    "precision": 0.7857142857142857,
+                    "recall": 0.9166666666666666,
+                    "f1": 0.8461538461538461
+                  },
+                  "Uncertain": {
+                    "support": 6,
+                    "precision": 0.25,
+                    "recall": 0.3333333333333333,
+                    "f1": 0.2857142857142857
+                  },
+                  "Not_NT_IH": {
+                    "support": 13,
+                    "precision": 0.75,
+                    "recall": 0.46153846153846156,
+                    "f1": 0.5714285714285714
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    11,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    2,
+                    2,
+                    1
+                  ],
+                  [
+                    0,
+                    1,
+                    6,
+                    6
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 19,
+                "accuracy": 0.6129032258064516,
+                "balanced_accuracy": 0.5106837606837606,
+                "macro_f1": 0.3782051282051282,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 12,
+                    "precision": 0.7857142857142857,
+                    "recall": 0.9166666666666666,
+                    "f1": 0.8461538461538461
+                  },
+                  "Uncertain": {
+                    "support": 6,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Not_NT_IH": {
+                    "support": 13,
+                    "precision": 0.7272727272727273,
+                    "recall": 0.6153846153846154,
+                    "f1": 0.6666666666666666
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    11,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    3,
+                    0,
+                    2
+                  ],
+                  [
+                    1,
+                    0,
+                    4,
+                    8
+                  ]
+                ]
+              }
+            },
+            "corrected": 2,
+            "regressed": 2
+          }
+        }
+      },
+      "three_way_common": {
+        "all": {
+          "patients": 117,
+          "metrics": {
+            "historical_A": {
+              "correct": 37,
+              "accuracy": 0.3162393162393162,
+              "balanced_accuracy": 0.416107895727461,
+              "macro_f1": 0.3637432648900539,
+              "per_class": {
+                "NT1": {
+                  "support": 14,
+                  "precision": 0.9,
+                  "recall": 0.6428571428571429,
+                  "f1": 0.75
+                },
+                "NT2_IH": {
+                  "support": 33,
+                  "precision": 0.3333333333333333,
+                  "recall": 0.12121212121212122,
+                  "f1": 0.17777777777777778
+                },
+                "Uncertain": {
+                  "support": 24,
+                  "precision": 0.2235294117647059,
+                  "recall": 0.7916666666666666,
+                  "f1": 0.3486238532110092
+                },
+                "Not_NT_IH": {
+                  "support": 46,
+                  "precision": 0.5,
+                  "recall": 0.10869565217391304,
+                  "f1": 0.17857142857142858
+                }
+              },
+              "confusion_matrix": [
+                [
+                  9,
+                  1,
+                  4,
+                  0
+                ],
+                [
+                  0,
+                  4,
+                  26,
+                  3
+                ],
+                [
+                  0,
+                  3,
+                  19,
+                  2
+                ],
+                [
+                  1,
+                  4,
+                  36,
+                  5
+                ]
+              ]
+            },
+            "original_B": {
+              "correct": 67,
+              "accuracy": 0.5726495726495726,
+              "balanced_accuracy": 0.6268645303971391,
+              "macro_f1": 0.5906029267129616,
+              "per_class": {
+                "NT1": {
+                  "support": 14,
+                  "precision": 0.8666666666666667,
+                  "recall": 0.9285714285714286,
+                  "f1": 0.896551724137931
+                },
+                "NT2_IH": {
+                  "support": 33,
+                  "precision": 0.5535714285714286,
+                  "recall": 0.9393939393939394,
+                  "f1": 0.6966292134831461
+                },
+                "Uncertain": {
+                  "support": 24,
+                  "precision": 0.25,
+                  "recall": 0.2916666666666667,
+                  "f1": 0.2692307692307692
+                },
+                "Not_NT_IH": {
+                  "support": 46,
+                  "precision": 0.8888888888888888,
+                  "recall": 0.34782608695652173,
+                  "f1": 0.5
+                }
+              },
+              "confusion_matrix": [
+                [
+                  13,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  31,
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  15,
+                  7,
+                  1
+                ],
+                [
+                  1,
+                  9,
+                  20,
+                  16
+                ]
+              ]
+            },
+            "combined_NT2_IH": {
+              "correct": 67,
+              "accuracy": 0.5726495726495726,
+              "balanced_accuracy": 0.6019551101072841,
+              "macro_f1": 0.557966298062045,
+              "per_class": {
+                "NT1": {
+                  "support": 14,
+                  "precision": 0.8666666666666667,
+                  "recall": 0.9285714285714286,
+                  "f1": 0.896551724137931
+                },
+                "NT2_IH": {
+                  "support": 33,
+                  "precision": 0.47692307692307695,
+                  "recall": 0.9393939393939394,
+                  "f1": 0.6326530612244898
+                },
+                "Uncertain": {
+                  "support": 24,
+                  "precision": 0.16666666666666666,
+                  "recall": 0.08333333333333333,
+                  "f1": 0.1111111111111111
+                },
+                "Not_NT_IH": {
+                  "support": 46,
+                  "precision": 0.84,
+                  "recall": 0.45652173913043476,
+                  "f1": 0.5915492957746479
+                }
+              },
+              "confusion_matrix": [
+                [
+                  13,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  31,
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  19,
+                  2,
+                  2
+                ],
+                [
+                  1,
+                  14,
+                  10,
+                  21
+                ]
+              ]
+            }
+          }
+        },
+        "beyond_cutoff_34": {
+          "patients": 31,
+          "metrics": {
+            "historical_A": {
+              "correct": 5,
+              "accuracy": 0.16129032258064516,
+              "balanced_accuracy": 0.24786324786324787,
+              "macro_f1": 0.09083191850594227,
+              "per_class": {
+                "NT1": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "NT2_IH": {
+                  "support": 12,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Uncertain": {
+                  "support": 6,
+                  "precision": 0.16,
+                  "recall": 0.6666666666666666,
+                  "f1": 0.25806451612903225
+                },
+                "Not_NT_IH": {
+                  "support": 13,
+                  "precision": 0.16666666666666666,
+                  "recall": 0.07692307692307693,
+                  "f1": 0.10526315789473684
+                }
+              },
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  9,
+                  3
+                ],
+                [
+                  0,
+                  0,
+                  4,
+                  2
+                ],
+                [
+                  0,
+                  0,
+                  12,
+                  1
+                ]
+              ]
+            },
+            "original_B": {
+              "correct": 19,
+              "accuracy": 0.6129032258064516,
+              "balanced_accuracy": 0.5705128205128205,
+              "macro_f1": 0.4258241758241758,
+              "per_class": {
+                "NT1": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "NT2_IH": {
+                  "support": 12,
+                  "precision": 0.7857142857142857,
+                  "recall": 0.9166666666666666,
+                  "f1": 0.8461538461538461
+                },
+                "Uncertain": {
+                  "support": 6,
+                  "precision": 0.25,
+                  "recall": 0.3333333333333333,
+                  "f1": 0.2857142857142857
+                },
+                "Not_NT_IH": {
+                  "support": 13,
+                  "precision": 0.75,
+                  "recall": 0.46153846153846156,
+                  "f1": 0.5714285714285714
+                }
+              },
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  11,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  2,
+                  2,
+                  1
+                ],
+                [
+                  0,
+                  1,
+                  6,
+                  6
+                ]
+              ]
+            },
+            "combined_NT2_IH": {
+              "correct": 19,
+              "accuracy": 0.6129032258064516,
+              "balanced_accuracy": 0.5106837606837606,
+              "macro_f1": 0.3782051282051282,
+              "per_class": {
+                "NT1": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "NT2_IH": {
+                  "support": 12,
+                  "precision": 0.7857142857142857,
+                  "recall": 0.9166666666666666,
+                  "f1": 0.8461538461538461
+                },
+                "Uncertain": {
+                  "support": 6,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Not_NT_IH": {
+                  "support": 13,
+                  "precision": 0.7272727272727273,
+                  "recall": 0.6153846153846154,
+                  "f1": 0.6666666666666666
+                }
+              },
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  11,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  3,
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  0,
+                  4,
+                  8
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "strict": {
+      "individual": {
+        "historical_A": {
+          "gold_patients": 128,
+          "prediction_records": 128,
+          "status_counts": {
+            "valid": 81,
+            "missing_prediction": 0,
+            "unmatched_prediction": 0,
+            "inference_error": 0,
+            "invalid_prediction": 2,
+            "prediction_metadata_mismatch": 0,
+            "quote_quality_failure": 45
+          },
+          "metric_denominator": 81,
+          "expected_record_accuracy": 0.171875,
+          "prediction_distribution": {
+            "NT1": 11,
+            "NT2_IH": 12,
+            "Uncertain": 93,
+            "Not_NT_IH": 11
+          },
+          "label_order": [
+            "NT1",
+            "NT2_IH",
+            "Uncertain",
+            "Not_NT_IH"
+          ],
+          "label_scheme": "combined",
+          "evaluation_policy": "strict",
+          "quote_quality_counts": {
+            "passed": 81,
+            "flagged": 46,
+            "unavailable": 1,
+            "source_missing": 0,
+            "not_checked": 0
+          },
+          "quote_flagged_predictions_in_metrics": 0,
+          "quote_only_recorded_errors_in_metrics": 0,
+          "label_mapping": {
+            "NT2": "NT2_IH",
+            "IH": "NT2_IH"
+          },
+          "metric_definition": "4-class metrics on eligible matched predictions under strict policy; macro-F1 uses all study labels",
+          "eligibility_definition": "Classification eligibility plus source-grounded quote checks applied identically to every run using original notes.",
+          "provenance": {
+            "reference_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+            "predictions_sha256": "928863874abd69912873d9cbef75aa83f2e4079f25030c1a7cb0e5e2df62e3c7",
+            "source_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+            "evaluation_code_sha256": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+            "validation_code_sha256": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+          },
+          "metrics": {
+            "accuracy": 0.2716049382716049,
+            "balanced_accuracy": 0.36044451871657757,
+            "macro_f1": 0.3171053728244645,
+            "weighted_f1": 0.24129746043585876,
+            "per_class": {
+              "NT1": {
+                "support": 11,
+                "predicted_count": 7,
+                "precision": 0.8571428571428571,
+                "recall": 0.5454545454545454,
+                "f1": 0.6666666666666666
+              },
+              "NT2_IH": {
+                "support": 20,
+                "predicted_count": 9,
+                "precision": 0.3333333333333333,
+                "recall": 0.15,
+                "f1": 0.20689655172413793
+              },
+              "Uncertain": {
+                "support": 16,
+                "predicted_count": 58,
+                "precision": 0.1896551724137931,
+                "recall": 0.6875,
+                "f1": 0.2972972972972973
+              },
+              "Not_NT_IH": {
+                "support": 34,
+                "predicted_count": 7,
+                "precision": 0.2857142857142857,
+                "recall": 0.058823529411764705,
+                "f1": 0.0975609756097561
+              }
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              3,
+              15,
+              2
+            ],
+            [
+              0,
+              2,
+              11,
+              3
+            ],
+            [
+              1,
+              4,
+              27,
+              2
+            ]
+          ]
+        },
+        "original_B": {
+          "gold_patients": 128,
+          "prediction_records": 128,
+          "status_counts": {
+            "valid": 45,
+            "missing_prediction": 0,
+            "unmatched_prediction": 0,
+            "inference_error": 8,
+            "invalid_prediction": 0,
+            "prediction_metadata_mismatch": 0,
+            "quote_quality_failure": 75
+          },
+          "metric_denominator": 45,
+          "expected_record_accuracy": 0.1875,
+          "prediction_distribution": {
+            "NT1": 16,
+            "NT2_IH": 57,
+            "Uncertain": 29,
+            "Not_NT_IH": 18
+          },
+          "label_order": [
+            "NT1",
+            "NT2_IH",
+            "Uncertain",
+            "Not_NT_IH"
+          ],
+          "label_scheme": "combined",
+          "evaluation_policy": "strict",
+          "quote_quality_counts": {
+            "passed": 45,
+            "flagged": 75,
+            "unavailable": 8,
+            "source_missing": 0,
+            "not_checked": 0
+          },
+          "quote_flagged_predictions_in_metrics": 0,
+          "quote_only_recorded_errors_in_metrics": 0,
+          "label_mapping": {
+            "NT2": "NT2_IH",
+            "IH": "NT2_IH"
+          },
+          "metric_definition": "4-class metrics on eligible matched predictions under strict policy; macro-F1 uses all study labels",
+          "eligibility_definition": "Classification eligibility plus source-grounded quote checks applied identically to every run using original notes.",
+          "provenance": {
+            "reference_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+            "predictions_sha256": "21397aec4f86d8f375b8a65733c042c2a9e75fa916c273704dcc9db59ce23873",
+            "source_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+            "evaluation_code_sha256": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+            "validation_code_sha256": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+          },
+          "metrics": {
+            "accuracy": 0.5333333333333333,
+            "balanced_accuracy": 0.6424603174603174,
+            "macro_f1": 0.5960055686442494,
+            "weighted_f1": 0.5408391042573951,
+            "per_class": {
+              "NT1": {
+                "support": 5,
+                "predicted_count": 5,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "NT2_IH": {
+                "support": 9,
+                "predicted_count": 19,
+                "precision": 0.42105263157894735,
+                "recall": 0.8888888888888888,
+                "f1": 0.5714285714285714
+              },
+              "Uncertain": {
+                "support": 10,
+                "predicted_count": 13,
+                "precision": 0.23076923076923078,
+                "recall": 0.3,
+                "f1": 0.2608695652173913
+              },
+              "Not_NT_IH": {
+                "support": 21,
+                "predicted_count": 8,
+                "precision": 1.0,
+                "recall": 0.38095238095238093,
+                "f1": 0.5517241379310345
+              }
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              8,
+              1,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              9,
+              8
+            ]
+          ]
+        },
+        "combined_NT2_IH": {
+          "gold_patients": 128,
+          "prediction_records": 128,
+          "status_counts": {
+            "valid": 47,
+            "missing_prediction": 0,
+            "unmatched_prediction": 0,
+            "inference_error": 1,
+            "invalid_prediction": 0,
+            "prediction_metadata_mismatch": 0,
+            "quote_quality_failure": 80
+          },
+          "metric_denominator": 47,
+          "expected_record_accuracy": 0.203125,
+          "prediction_distribution": {
+            "NT1": 17,
+            "NT2_IH": 67,
+            "Uncertain": 16,
+            "Not_NT_IH": 27
+          },
+          "label_order": [
+            "NT1",
+            "NT2_IH",
+            "Uncertain",
+            "Not_NT_IH"
+          ],
+          "label_scheme": "combined",
+          "evaluation_policy": "strict",
+          "quote_quality_counts": {
+            "passed": 47,
+            "flagged": 80,
+            "unavailable": 1,
+            "source_missing": 0,
+            "not_checked": 0
+          },
+          "quote_flagged_predictions_in_metrics": 0,
+          "quote_only_recorded_errors_in_metrics": 0,
+          "label_mapping": {
+            "NT2": "NT2_IH",
+            "IH": "NT2_IH"
+          },
+          "metric_definition": "4-class metrics on eligible matched predictions under strict policy; macro-F1 uses all study labels",
+          "eligibility_definition": "Classification eligibility plus source-grounded quote checks applied identically to every run using original notes.",
+          "provenance": {
+            "reference_sha256": "46b7a309dbed5cf66450b31a4595b02430b21825c48952b873aa9f508976f17e",
+            "predictions_sha256": "f7ea117bea6e23936ef382113530374112000eb2966b41ae1ee04c714f2ff2bc",
+            "source_sha256": "18d32b5a313d6af02ab9b01bd16e953878d1a42ddae180a064ea7c3fec94b611",
+            "evaluation_code_sha256": "28dcee864b6383f6154530f62a51a175faa381ca6e070282c44fbe7f2f26a15e",
+            "validation_code_sha256": "f10b1b5ecd3dda28d618320062740c23b6914cbd2849e88fb97d19c22d4bc04a"
+          },
+          "metrics": {
+            "accuracy": 0.5531914893617021,
+            "balanced_accuracy": 0.5587121212121212,
+            "macro_f1": 0.5479853479853479,
+            "weighted_f1": 0.5599251812017769,
+            "per_class": {
+              "NT1": {
+                "support": 4,
+                "predicted_count": 3,
+                "precision": 1.0,
+                "recall": 0.75,
+                "f1": 0.8571428571428571
+              },
+              "NT2_IH": {
+                "support": 11,
+                "predicted_count": 24,
+                "precision": 0.375,
+                "recall": 0.8181818181818182,
+                "f1": 0.5142857142857142
+              },
+              "Uncertain": {
+                "support": 8,
+                "predicted_count": 5,
+                "precision": 0.2,
+                "recall": 0.125,
+                "f1": 0.15384615384615385
+              },
+              "Not_NT_IH": {
+                "support": 24,
+                "predicted_count": 15,
+                "precision": 0.8666666666666667,
+                "recall": 0.5416666666666666,
+                "f1": 0.6666666666666666
+              }
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0,
+              2
+            ],
+            [
+              0,
+              7,
+              1,
+              0
+            ],
+            [
+              0,
+              7,
+              4,
+              13
+            ]
+          ]
+        }
+      },
+      "pairwise": {
+        "historical_A_vs_original_B": {
+          "all": {
+            "patients": 28,
+            "metrics": {
+              "historical_A": {
+                "correct": 8,
+                "accuracy": 0.2857142857142857,
+                "balanced_accuracy": 0.25,
+                "macro_f1": 0.16666666666666666,
+                "per_class": {
+                  "NT1": {
+                    "support": 3,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 4,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Uncertain": {
+                    "support": 7,
+                    "precision": 0.3,
+                    "recall": 0.8571428571428571,
+                    "f1": 0.4444444444444444
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 0.5,
+                    "recall": 0.14285714285714285,
+                    "f1": 0.2222222222222222
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    3,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    2,
+                    2
+                  ],
+                  [
+                    0,
+                    1,
+                    6,
+                    0
+                  ],
+                  [
+                    0,
+                    3,
+                    9,
+                    2
+                  ]
+                ]
+              },
+              "original_B": {
+                "correct": 15,
+                "accuracy": 0.5357142857142857,
+                "balanced_accuracy": 0.6517857142857142,
+                "macro_f1": 0.6,
+                "per_class": {
+                  "NT1": {
+                    "support": 3,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0
+                  },
+                  "NT2_IH": {
+                    "support": 4,
+                    "precision": 0.2727272727272727,
+                    "recall": 0.75,
+                    "f1": 0.4
+                  },
+                  "Uncertain": {
+                    "support": 7,
+                    "precision": 0.375,
+                    "recall": 0.42857142857142855,
+                    "f1": 0.4
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 1.0,
+                    "recall": 0.42857142857142855,
+                    "f1": 0.6
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    3,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    3,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    4,
+                    3,
+                    0
+                  ],
+                  [
+                    0,
+                    4,
+                    4,
+                    6
+                  ]
+                ]
+              }
+            },
+            "corrected": 11,
+            "regressed": 4
+          },
+          "beyond_cutoff_34": {
+            "patients": 7,
+            "metrics": {
+              "historical_A": {
+                "correct": 2,
+                "accuracy": 0.2857142857142857,
+                "balanced_accuracy": 0.4166666666666667,
+                "macro_f1": 0.17142857142857143,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 2,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Uncertain": {
+                    "support": 1,
+                    "precision": 0.25,
+                    "recall": 1.0,
+                    "f1": 0.4
+                  },
+                  "Not_NT_IH": {
+                    "support": 4,
+                    "precision": 0.3333333333333333,
+                    "recall": 0.25,
+                    "f1": 0.2857142857142857
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    3,
+                    1
+                  ]
+                ]
+              },
+              "original_B": {
+                "correct": 6,
+                "accuracy": 0.8571428571428571,
+                "balanced_accuracy": 0.9166666666666666,
+                "macro_f1": 0.6309523809523809,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 2,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0
+                  },
+                  "Uncertain": {
+                    "support": 1,
+                    "precision": 0.5,
+                    "recall": 1.0,
+                    "f1": 0.6666666666666666
+                  },
+                  "Not_NT_IH": {
+                    "support": 4,
+                    "precision": 1.0,
+                    "recall": 0.75,
+                    "f1": 0.8571428571428571
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1,
+                    3
+                  ]
+                ]
+              }
+            },
+            "corrected": 4,
+            "regressed": 0
+          }
+        },
+        "historical_A_vs_combined_NT2_IH": {
+          "all": {
+            "patients": 28,
+            "metrics": {
+              "historical_A": {
+                "correct": 5,
+                "accuracy": 0.17857142857142858,
+                "balanced_accuracy": 0.1845238095238095,
+                "macro_f1": 0.1047008547008547,
+                "per_class": {
+                  "NT1": {
+                    "support": 1,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 7,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Uncertain": {
+                    "support": 6,
+                    "precision": 0.2,
+                    "recall": 0.6666666666666666,
+                    "f1": 0.3076923076923077
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 0.25,
+                    "recall": 0.07142857142857142,
+                    "f1": 0.1111111111111111
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    5,
+                    2
+                  ],
+                  [
+                    0,
+                    1,
+                    4,
+                    1
+                  ],
+                  [
+                    0,
+                    3,
+                    10,
+                    1
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 15,
+                "accuracy": 0.5357142857142857,
+                "balanced_accuracy": 0.613095238095238,
+                "macro_f1": 0.5912698412698413,
+                "per_class": {
+                  "NT1": {
+                    "support": 1,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0
+                  },
+                  "NT2_IH": {
+                    "support": 7,
+                    "precision": 0.35714285714285715,
+                    "recall": 0.7142857142857143,
+                    "f1": 0.47619047619047616
+                  },
+                  "Uncertain": {
+                    "support": 6,
+                    "precision": 0.3333333333333333,
+                    "recall": 0.16666666666666666,
+                    "f1": 0.2222222222222222
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 0.8,
+                    "recall": 0.5714285714285714,
+                    "f1": 0.6666666666666666
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    1,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    5,
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    5,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    4,
+                    2,
+                    8
+                  ]
+                ]
+              }
+            },
+            "corrected": 13,
+            "regressed": 3
+          },
+          "beyond_cutoff_34": {
+            "patients": 9,
+            "metrics": {
+              "historical_A": {
+                "correct": 0,
+                "accuracy": 0.0,
+                "balanced_accuracy": 0.0,
+                "macro_f1": 0.0,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 4,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Uncertain": {
+                    "support": 1,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Not_NT_IH": {
+                    "support": 4,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    2,
+                    2
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    0,
+                    0,
+                    4,
+                    0
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 6,
+                "accuracy": 0.6666666666666666,
+                "balanced_accuracy": 0.5,
+                "macro_f1": 0.375,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 4,
+                    "precision": 0.75,
+                    "recall": 0.75,
+                    "f1": 0.75
+                  },
+                  "Uncertain": {
+                    "support": 1,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Not_NT_IH": {
+                    "support": 4,
+                    "precision": 0.75,
+                    "recall": 0.75,
+                    "f1": 0.75
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    3,
+                    0,
+                    1
+                  ],
+                  [
+                    0,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1,
+                    3
+                  ]
+                ]
+              }
+            },
+            "corrected": 6,
+            "regressed": 0
+          }
+        },
+        "original_B_vs_combined_NT2_IH": {
+          "all": {
+            "patients": 28,
+            "metrics": {
+              "original_B": {
+                "correct": 16,
+                "accuracy": 0.5714285714285714,
+                "balanced_accuracy": 0.6333333333333334,
+                "macro_f1": 0.6113782051282051,
+                "per_class": {
+                  "NT1": {
+                    "support": 3,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0
+                  },
+                  "NT2_IH": {
+                    "support": 6,
+                    "precision": 0.5,
+                    "recall": 0.8333333333333334,
+                    "f1": 0.625
+                  },
+                  "Uncertain": {
+                    "support": 5,
+                    "precision": 0.125,
+                    "recall": 0.2,
+                    "f1": 0.15384615384615385
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 1.0,
+                    "recall": 0.5,
+                    "f1": 0.6666666666666666
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    3,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    5,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    4,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1,
+                    6,
+                    7
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 19,
+                "accuracy": 0.6785714285714286,
+                "balanced_accuracy": 0.6785714285714286,
+                "macro_f1": 0.6162280701754386,
+                "per_class": {
+                  "NT1": {
+                    "support": 3,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0
+                  },
+                  "NT2_IH": {
+                    "support": 6,
+                    "precision": 0.46153846153846156,
+                    "recall": 1.0,
+                    "f1": 0.631578947368421
+                  },
+                  "Uncertain": {
+                    "support": 5,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Not_NT_IH": {
+                    "support": 14,
+                    "precision": 1.0,
+                    "recall": 0.7142857142857143,
+                    "f1": 0.8333333333333334
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    3,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    6,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    5,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2,
+                    2,
+                    10
+                  ]
+                ]
+              }
+            },
+            "corrected": 4,
+            "regressed": 1
+          },
+          "beyond_cutoff_34": {
+            "patients": 5,
+            "metrics": {
+              "original_B": {
+                "correct": 4,
+                "accuracy": 0.8,
+                "balanced_accuracy": 0.8333333333333333,
+                "macro_f1": 0.45,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 2,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0
+                  },
+                  "Uncertain": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Not_NT_IH": {
+                    "support": 3,
+                    "precision": 1.0,
+                    "recall": 0.6666666666666666,
+                    "f1": 0.8
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1,
+                    2
+                  ]
+                ]
+              },
+              "combined_NT2_IH": {
+                "correct": 4,
+                "accuracy": 0.8,
+                "balanced_accuracy": 0.8333333333333333,
+                "macro_f1": 0.45,
+                "per_class": {
+                  "NT1": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "NT2_IH": {
+                    "support": 2,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0
+                  },
+                  "Uncertain": {
+                    "support": 0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1": 0.0
+                  },
+                  "Not_NT_IH": {
+                    "support": 3,
+                    "precision": 1.0,
+                    "recall": 0.6666666666666666,
+                    "f1": 0.8
+                  }
+                },
+                "confusion_matrix": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1,
+                    2
+                  ]
+                ]
+              }
+            },
+            "corrected": 0,
+            "regressed": 0
+          }
+        }
+      },
+      "three_way_common": {
+        "all": {
+          "patients": 17,
+          "metrics": {
+            "historical_A": {
+              "correct": 4,
+              "accuracy": 0.23529411764705882,
+              "balanced_accuracy": 0.2152777777777778,
+              "macro_f1": 0.14166666666666666,
+              "per_class": {
+                "NT1": {
+                  "support": 1,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "NT2_IH": {
+                  "support": 3,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Uncertain": {
+                  "support": 4,
+                  "precision": 0.2727272727272727,
+                  "recall": 0.75,
+                  "f1": 0.4
+                },
+                "Not_NT_IH": {
+                  "support": 9,
+                  "precision": 0.3333333333333333,
+                  "recall": 0.1111111111111111,
+                  "f1": 0.16666666666666666
+                }
+              },
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  2
+                ],
+                [
+                  0,
+                  1,
+                  3,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  6,
+                  1
+                ]
+              ]
+            },
+            "original_B": {
+              "correct": 9,
+              "accuracy": 0.5294117647058824,
+              "balanced_accuracy": 0.6180555555555556,
+              "macro_f1": 0.5952380952380952,
+              "per_class": {
+                "NT1": {
+                  "support": 1,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0
+                },
+                "NT2_IH": {
+                  "support": 3,
+                  "precision": 0.3333333333333333,
+                  "recall": 0.6666666666666666,
+                  "f1": 0.4444444444444444
+                },
+                "Uncertain": {
+                  "support": 4,
+                  "precision": 0.2,
+                  "recall": 0.25,
+                  "f1": 0.2222222222222222
+                },
+                "Not_NT_IH": {
+                  "support": 9,
+                  "precision": 1.0,
+                  "recall": 0.5555555555555556,
+                  "f1": 0.7142857142857143
+                }
+              },
+              "confusion_matrix": [
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  3,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  3,
+                  5
+                ]
+              ]
+            },
+            "combined_NT2_IH": {
+              "correct": 10,
+              "accuracy": 0.5882352941176471,
+              "balanced_accuracy": 0.6666666666666666,
+              "macro_f1": 0.575,
+              "per_class": {
+                "NT1": {
+                  "support": 1,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0
+                },
+                "NT2_IH": {
+                  "support": 3,
+                  "precision": 0.3333333333333333,
+                  "recall": 1.0,
+                  "f1": 0.5
+                },
+                "Uncertain": {
+                  "support": 4,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Not_NT_IH": {
+                  "support": 9,
+                  "precision": 1.0,
+                  "recall": 0.6666666666666666,
+                  "f1": 0.8
+                }
+              },
+              "confusion_matrix": [
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  3,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  4,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  1,
+                  6
+                ]
+              ]
+            }
+          }
+        },
+        "beyond_cutoff_34": {
+          "patients": 5,
+          "metrics": {
+            "historical_A": {
+              "correct": 0,
+              "accuracy": 0.0,
+              "balanced_accuracy": 0.0,
+              "macro_f1": 0.0,
+              "per_class": {
+                "NT1": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "NT2_IH": {
+                  "support": 2,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Uncertain": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Not_NT_IH": {
+                  "support": 3,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                }
+              },
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  3,
+                  0
+                ]
+              ]
+            },
+            "original_B": {
+              "correct": 4,
+              "accuracy": 0.8,
+              "balanced_accuracy": 0.8333333333333333,
+              "macro_f1": 0.45,
+              "per_class": {
+                "NT1": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "NT2_IH": {
+                  "support": 2,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0
+                },
+                "Uncertain": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Not_NT_IH": {
+                  "support": 3,
+                  "precision": 1.0,
+                  "recall": 0.6666666666666666,
+                  "f1": 0.8
+                }
+              },
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  2
+                ]
+              ]
+            },
+            "combined_NT2_IH": {
+              "correct": 4,
+              "accuracy": 0.8,
+              "balanced_accuracy": 0.8333333333333333,
+              "macro_f1": 0.45,
+              "per_class": {
+                "NT1": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "NT2_IH": {
+                  "support": 2,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0
+                },
+                "Uncertain": {
+                  "support": 0,
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0
+                },
+                "Not_NT_IH": {
+                  "support": 3,
+                  "precision": 1.0,
+                  "recall": 0.6666666666666666,
+                  "f1": 0.8
+                }
+              },
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  2
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "input_artifacts_sha256": {
+    "NT_LLM/runs/stanford_v2_20261022T003015723429Z/nt_patient_llm_outputs.jsonl": "928863874abd69912873d9cbef75aa83f2e4079f25030c1a7cb0e5e2df62e3c7",
+    "NT_LLM/runs/stanford_v2_20261022T003015723429Z/run_manifest.json": "5257cc0013be685f93b4c0a50dce7bc09fc5edff875a4684fdcd87bb8cba5af9",
+    "NT_LLM/runs/stanford_v2_20261022T003015723429Z/prompt_snapshot.txt": "ec7a5994e129f004b618acbc66a127211984f10d5df5af63cbe3238d9a97d6fa",
+    "NT_LLM/runs/retry_B_combined_20261118T062415Z/original_B/retry_run/nt_patient_llm_outputs.jsonl": "21397aec4f86d8f375b8a65733c042c2a9e75fa916c273704dcc9db59ce23873",
+    "NT_LLM/runs/retry_B_combined_20261118T062415Z/original_B/retry_run/run_manifest.json": "ddcb10553f4025197571a11c142eaa57c9beafbdd6f652826923a1a0a8d48b5e",
+    "NT_LLM/runs/retry_B_combined_20261118T062415Z/original_B/retry_run/prompt_snapshot.txt": "ec7a5994e129f004b618acbc66a127211984f10d5df5af63cbe3238d9a97d6fa",
+    "NT_LLM/runs/retry_B_combined_20261118T062415Z/combined_NT2_IH/retry_run/nt_patient_llm_outputs.jsonl": "f7ea117bea6e23936ef382113530374112000eb2966b41ae1ee04c714f2ff2bc",
+    "NT_LLM/runs/retry_B_combined_20261118T062415Z/combined_NT2_IH/retry_run/run_manifest.json": "00df3875c576fbbb031df25bd169e3959f8d95aa7d96586ce255cafed8c49868",
+    "NT_LLM/runs/retry_B_combined_20261118T062415Z/combined_NT2_IH/retry_run/prompt_snapshot.txt": "0be792aedce7e03a88c51e2e6971a6eee8b81c3af0832dc917653a736c5cab94"
+  },
+  "historical_A_quote_scope": {
+    "full_record_pass": 81,
+    "actual_prefix_pass": 80,
+    "full_pass_but_prefix_fail": 1
+  },
+  "original_artifacts_unchanged": true,
+  "inference_performed": false
+}

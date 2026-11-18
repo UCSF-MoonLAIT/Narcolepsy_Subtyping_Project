@@ -1,0 +1,48 @@
+{
+  "reviewed_cases": 80,
+  "reviewed_rejected_quotes": 125,
+  "all_evidence_quotes_in_flagged_cases": 277,
+  "already_matched_quotes": 152,
+  "case_groups_mutually_exclusive": {
+    "priority_evidence_review": 31,
+    "capitalization_or_punctuation_only": 9,
+    "rewritten_or_joined_quotation": 38,
+    "minor_spelling_or_split_word_spacing_only": 2
+  },
+  "quote_groups_mutually_exclusive": {
+    "high": 36,
+    "formatting": 34,
+    "nonverbatim_rewrite": 53,
+    "minor_text_normalization": 2
+  },
+  "cases_with_mask_expansion_or_cross_passage_mask_replacement": 28,
+  "quotes_with_mask_expansion_or_cross_passage_mask_replacement": 33,
+  "cases_with_at_least_one_other_matched_quote": 74,
+  "cases_without_other_matched_quote": 6,
+  "single_source_chunk_cases": 49,
+  "multi_source_chunk_cases": 31,
+  "reference_label_agreement_not_clinical_confirmation": 46,
+  "reference_label_disagreement_not_adjudication": 34,
+  "by_group": {
+    "capitalization_or_punctuation_only": {
+      "cases": 9,
+      "reference_agreements": 4
+    },
+    "minor_spelling_or_split_word_spacing_only": {
+      "cases": 2,
+      "reference_agreements": 1
+    },
+    "priority_evidence_review": {
+      "cases": 31,
+      "reference_agreements": 19
+    },
+    "rewritten_or_joined_quotation": {
+      "cases": 38,
+      "reference_agreements": 22
+    }
+  },
+  "clinical_label_adjudication": "not_performed",
+  "acceptance_rules_changed": false,
+  "comparison_inclusion_rules_changed": false,
+  "finalizer_sha256": "3b58825d4f5b7009ab1d32a92e06020c083efd444c38df8874768b87afe8c988"
+}

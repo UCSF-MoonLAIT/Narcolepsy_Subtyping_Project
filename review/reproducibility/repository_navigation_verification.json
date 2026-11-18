@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-18",
+  "current_review_directory": "review/",
+  "reviewer_documents_directory": "docs/",
+  "protected_artifact_files_unchanged": 1509,
+  "active_code_prompt_and_requirements_files_unchanged": 25,
+  "metric_and_figure_files_preserved_byte_for_byte": 33,
+  "offline_tests_passed": 23,
+  "four_figures_reproduced_from_aggregate_data_with_identical_PNGs": true,
+  "no_inference_started": true,
+  "clinical_adjudication_not_performed": true,
+  "patient_data_raw_runs_and_private_exports_ignored_by_git": true,
+  "aggregate_reports_JSON_and_figures_versionable": true,
+  "legacy_general_and_specialist_notes_paths_resolve": true,
+  "superseded_root_documents_preserved_with_hashes": true,
+  "old_navigation_details": "Ignored local archive/20261118_navigation/ contains original paths, hashes and previous documents.",
+  "markdown_documents_checked": 19,
+  "local_links_and_anchors_checked": 98,
+  "ignored_data_links_only_in_explicit_optional_specialist_notes": true,
+  "optional_local_data_links": 7
+}
